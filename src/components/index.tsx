@@ -1,4 +1,5 @@
 import EPaper from './epaper';
+import Icons from './Icons';
 
-export default { EPaper };
-export { EPaper };
+export default { EPaper, Icons };
+export { EPaper, Icons };

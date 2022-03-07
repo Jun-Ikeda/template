@@ -6,7 +6,7 @@ import { Theme } from 'src/interface';
 import Color from './Color';
 
 const primary = Color.green[4];
-const accent = Color.green[7];
+const accent = Color.green[15];
 
 const light: Theme = merge(
   PaperDefaultTheme,

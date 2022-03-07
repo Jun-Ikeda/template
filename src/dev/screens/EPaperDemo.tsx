@@ -22,12 +22,13 @@ const styles = StyleSheet.create({
   },
 });
 
-const { Container } = EPaper;
+const { Container, Button } = EPaper;
 const EPaperDemo = (props: EPaperDemoProps) => {
   const { navigation, route } = props;
   return (
     <Container style={styles.container}>
       <Text>EPaperDemo</Text>
+      <Button mode="contained" onPress={() => alert('Gradient button!')}>Test Button</Button>
     </Container>
   );
 };

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StyleSheet } from 'react-native';
 
 import { connect } from 'react-redux';
-import { Text, Button, TextInput } from 'react-native-paper';
+import { Button, TextInput } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 import { EPaper } from 'src/components';
