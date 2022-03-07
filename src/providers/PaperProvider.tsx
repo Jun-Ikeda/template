@@ -2,17 +2,17 @@ import * as React from 'react';
 
 import { Provider } from 'react-native-paper';
 
-import { Theme } from 'src/config';
+import { Theme } from 'src/interface';
 
 interface PaperProviderProps {
   children: React.ReactNode;
-  isDark: boolean;
+  theme: Theme;
 }
 
 const PaperProvider = (props: PaperProviderProps) => {
-  const { children, isDark } = props;
+  const { children, theme } = props;
   return (
-    <Provider theme={isDark ? Theme.dark : Theme.light}>
+    <Provider theme={theme}>
       {children}
     </Provider>
   );

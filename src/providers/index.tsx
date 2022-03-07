@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { StatusBar, useColorScheme } from 'react-native';
 
+import { Theme } from 'src/config';
+
 import ReduxProvider from './ReduxProvider';
 import PaperProvider from './PaperProvider';
 import NavigationProvider from './NavigationProvider';
@@ -15,13 +17,13 @@ const Providers = (props: ProvidersProps) => {
   const isDark = colorScheme === 'dark';
   return (
     <ReduxProvider>
-      <PaperProvider isDark={isDark}>
+      <PaperProvider theme={isDark ? Theme.dark : Theme.light}>
         <StatusBar
           barStyle={isDark ? 'light-content' : 'dark-content'}
           translucent
           backgroundColor="transparent"
         />
-        <NavigationProvider>
+        <NavigationProvider theme={isDark ? Theme.dark : Theme.light}>
           {children}
         </NavigationProvider>
       </PaperProvider>

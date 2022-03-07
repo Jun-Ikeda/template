@@ -32,8 +32,7 @@ const Detail = (props: DetailProps) => {
   return (
     <Container style={styles.container}>
       <Button onPress={() => navigation.goBack()}>Back to Hello World</Button>
-      <Text>Detail</Text>
-      <Text>{`This is passed by navigation.navigate('Detail', { message: '--' }): ${message}`}</Text>
+      <Text>{`This is passed by navigation.navigate('Detail', { message }): ${message}`}</Text>
       <Text>{`This is retrieved from redux: ${helloworld.message}, ${helloworld.count}`}</Text>
     </Container>
   );
