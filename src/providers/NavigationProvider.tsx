@@ -10,7 +10,7 @@ interface NavigationProviderProps {
   theme: Theme;
 }
 
-const NavState_Key = 'NavState_Key';
+const NAVSTATE_KEY = 'NavState_Key';
 const NavigationProvider = (props: NavigationProviderProps) => {
   const { children, theme } = props;
   const [isReady, setIsReady] = React.useState(false);
@@ -19,7 +19,7 @@ const NavigationProvider = (props: NavigationProviderProps) => {
   React.useEffect(() => {
     const restoreNavState = async () => {
       try {
-        const savedNavStateString = await AsyncStorage.getItem(NavState_Key);
+        const savedNavStateString = await AsyncStorage.getItem(NAVSTATE_KEY);
         const state = savedNavStateString ? JSON.parse(savedNavStateString) : undefined;
         if (state !== undefined) { setInitialNavState(state); }
       } catch (e) {
@@ -32,7 +32,7 @@ const NavigationProvider = (props: NavigationProviderProps) => {
   }, [isReady]);
 
   const saveNavState = (navState) => {
-    AsyncStorage.setItem(NavState_Key, JSON.stringify(navState));
+    AsyncStorage.setItem(NAVSTATE_KEY, JSON.stringify(navState));
   };
 
   if (!isReady) { return null; }
