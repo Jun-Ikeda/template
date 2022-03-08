@@ -1,3 +1,8 @@
 web対応
 NavigationProvider.tsx
 navigation state persistence
+
+todo
+・LayoutAnimationProvider.tsx
+・config/Styles.ts
+・config/CFs.ts <-- common functions such as onLayout
